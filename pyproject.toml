@@ -41,8 +41,6 @@ uri2ops = { git = "https://github.com/tellmesh/uri2ops.git" }
 uri3 = { git = "https://github.com/tellmesh/uri3.git" }
 nl2uri = { git = "https://github.com/tellmesh/nl2uri.git" }
 urigen = { git = "https://github.com/tellmesh/urigen.git" }
-resource-agent-hypervisor = { git = "https://github.com/wronai/hypervisor.git", subdirectory = "packages/resource-agent-hypervisor" }
-hypervisor-dashboard-agent = { git = "https://github.com/wronai/hypervisor.git", subdirectory = "agents/system/hypervisor_dashboard" }
 
 [tool.pfix]
 # Self-healing Python configuration
