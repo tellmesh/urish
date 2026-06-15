@@ -10,6 +10,12 @@ import yaml
 
 
 def _repo_root(start: Path | None = None) -> Path:
+    try:
+        from uri3.config.repo_root import find_repo_root
+
+        return find_repo_root(start, strict=False)
+    except Exception:
+        pass
     current = (start or Path.cwd()).resolve()
     for candidate in (current, *current.parents):
         if (candidate / "pyproject.toml").exists() and (candidate / "agents").exists():

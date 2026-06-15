@@ -35,12 +35,15 @@ where = ["."]
 include = ["urish*"]
 
 [tool.uv.sources]
-uri2run = { git = "https://github.com/tellmesh/uri2run.git" }
-uri2flow = { git = "https://github.com/tellmesh/uri2flow.git" }
-uri2ops = { git = "https://github.com/tellmesh/uri2ops.git" }
-uri3 = { git = "https://github.com/tellmesh/uri3.git" }
-nl2uri = { git = "https://github.com/tellmesh/nl2uri.git" }
-urigen = { git = "https://github.com/tellmesh/urigen.git" }
+uri2run = { path = "../uri2run", editable = true }
+uri2flow = { path = "../uri2flow", editable = true }
+uri2ops = { path = "../uri2ops", editable = true }
+uri3 = { path = "../uri3", editable = true }
+nl2uri = { path = "../nl2uri", editable = true }
+urigen = { path = "../urigen", editable = true }
+resource-agent-hypervisor = { path = "../resource-agent-hypervisor", editable = true }
+resource-agent-factory = { path = "../resource-agent-factory", editable = true }
+hypervisor-dashboard-agent = { path = "../hypervisor-dashboard", editable = true }
 
 [tool.pfix]
 # Self-healing Python configuration
