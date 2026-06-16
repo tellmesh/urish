@@ -125,3 +125,20 @@ proposals, and artifact lifecycle envelope coverage.
 commands (`call`, `explain`, `plan`, `run`, `logs`, `watch`, `stream`) are
 registered from `urish.commands.runtime`; backend work stays in
 `urish.backends.*`.
+
+## Install
+
+```bash
+pip install -e .
+uri --help
+```
+
+## Links
+
+- [TODO](TODO.md)
+- Org status: [`../TODO_STATUS.md`](../TODO_STATUS.md)
+
+
+## License
+
+Licensed under Apache-2.0.
