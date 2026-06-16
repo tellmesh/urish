@@ -1,0 +1,86 @@
+$schema: packages/urigen/urigen/schemas/ecosystem_proposal.schema.json
+apiVersion: uri3.io/v1
+kind: EcosystemProposal
+metadata:
+  id: hypervisor-dashboard
+  created_by: urigen://planner
+  source_prompt: stwórz web UI agenta hypervisor-dashboard do pokazywania procesów
+    hypervisora, incydentów, napraw i ticketów
+uri:
+  self: proposal://ecosystem/hypervisor-dashboard
+  target: ecosystem://hypervisor-dashboard
+spec:
+  profile: dashboard-agent
+  intent:
+    domains:
+    - hypervisor_dashboard
+    agents:
+    - hypervisor-dashboard
+    capabilities:
+    - view.process.agent
+    - view.incident.explain
+    - action.repair.diagnose
+    flows:
+    - dashboard-open
+    deployments:
+    - hypervisor-dashboard.local
+    operator: true
+    voice: false
+  artifacts_to_generate:
+  - ecosystem.yaml
+  - domain_pack
+  - agent_contract
+  - touri_capabilities
+  - uri_flows
+  - deployment_config
+  - markpact_readme
+  - test_plan
+version: 1
+proposal:
+  id: hypervisor-dashboard
+  source_prompt: stwórz web UI agenta hypervisor-dashboard do pokazywania procesów
+    hypervisora, incydentów, napraw i ticketów
+  kind: ecosystem
+  profile: dashboard-agent
+  subtype: dashboard-agent
+intent:
+  domains:
+  - hypervisor_dashboard
+  agents:
+  - hypervisor-dashboard
+  capabilities:
+  - view.process.agent
+  - view.incident.explain
+  - action.repair.diagnose
+  flows:
+  - dashboard-open
+  deployments:
+  - hypervisor-dashboard.local
+  operator: true
+  voice: false
+profile:
+  name: dashboard-agent
+  include:
+  - contracts
+  - capabilities
+  - flows
+  - deployments
+  - app
+  - tests
+  - doctor
+policy:
+  requires_approval: true
+  side_effects:
+  - generate_files
+  - create_deployment_config
+  - register_capabilities
+  execution_allowed: false
+artifacts_to_generate:
+- ecosystem.yaml
+- domain_pack
+- agent_contract
+- touri_capabilities
+- uri_flows
+- deployment_config
+- markpact_readme
+- test_plan
